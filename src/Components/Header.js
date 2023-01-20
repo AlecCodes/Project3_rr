@@ -1,4 +1,4 @@
 function Header(props){
-    return <h1>HEADER Component</h1>
+    return <div className="header"><h1>Header</h1></div>
 }
 export default Header

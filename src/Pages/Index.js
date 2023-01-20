@@ -1,4 +1,4 @@
 function Index(props){
-    return <h1>Index Component</h1>
+    return <div className="container"><h1>Index Component</h1></div>
 }
 export default Index
