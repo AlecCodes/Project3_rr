@@ -6,6 +6,7 @@ import {useState} from 'react'
 import data from './dummydata'
 
 function App() {
+  const [dataState, setDataState] = useState(data)
   const [formState, setFormState] = useState('')
   function changeHandler(event){
     setFormState(event.target.value)
@@ -15,14 +16,16 @@ function App() {
         return element
       }
     })
-
+    console.log('Change handler')
     console.log(filtered)
+    setDataState(filtered)
+
   }
 
   return (
     <div className="App">
       <Header value={formState} onChange={changeHandler}/>
-      <Outlet/>
+      <Outlet context={dataState}/>
       <Footer/>
     </div>
   );

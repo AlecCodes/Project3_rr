@@ -1,6 +1,8 @@
+import { useOutletContext } from 'react-router-dom'
 import data from '../dummydata'
 
 function Index(props){
+
     data.sort((a,b) => {
         if (a.name > b.name){
             return 1

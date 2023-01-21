@@ -1,4 +1,4 @@
-import {createBrowserRouter, createRoutesFromElements, Route} from "react-router-dom"
+import {useOutletContext, createBrowserRouter, createRoutesFromElements, Route} from "react-router-dom"
 import {Header} from './Components/Header'
 import Index from './Pages/Index'
 import Show from './Pages/Show'
