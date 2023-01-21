@@ -2,8 +2,12 @@ import { useOutletContext } from 'react-router-dom'
 import data from '../dummydata'
 
 function Index(props){
+    //See the context prop of Outlet component in app.js
+    const contextdata = useOutletContext()
+    // console.log("CONTEXT DATA IN INDEX ROUTE - VVVVVV")
+    // console.log(contextdata)
 
-    data.sort((a,b) => {
+    contextdata.sort((a,b) => {
         if (a.name > b.name){
             return 1
         } else if(a.name < b.name){
@@ -14,7 +18,7 @@ function Index(props){
     })
     return <div className="container">
 
-            {data.map((element, index) => (
+            {contextdata.map((element, index) => (
                 <div className="card" key={index}>
                     <div className="cardHeader">{element.name}</div>
                     <div className='cardImageContainer'>
