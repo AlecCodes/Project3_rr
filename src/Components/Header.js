@@ -2,16 +2,22 @@ import {Form} from 'react-router-dom'
 
 function Header(props){
     return <div className="header">
-        <div>
-            <h1>RESTAURANT <br/> REVIEW</h1>
+        <div className='headerTop'>
+            <div>
+                <h2>RESTAURANT <br/> REVIEW</h2>
+            </div>
+            <Form>
+                <input type='text' placeholder='Search'/>
+                <input type="submit" value='Search'/>
+            </Form>
+            <div>
+                <a>Register</a>
+                <a>Login</a>
+            </div>
         </div>
-        <Form width='30%'>
-            <input type='text' placeholder='Search'/>
-            <input type="submit" value='Search'/>
-        </Form>
-        <div>
-            <a>Register</a>
-            <a>Login</a>
+        <div className="headerBottom">
+                <div>Restaurants</div>
+                <div>Write Review</div>
         </div>
     </div>
 }

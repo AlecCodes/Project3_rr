@@ -36,6 +36,7 @@ function Index(props){
         }
     })
     return <div className="container">
+
             {data.map((element, index) => (
                 <div className="card">
                     <div className="cardHeader">{element.name}</div>

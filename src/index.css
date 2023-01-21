@@ -31,9 +31,10 @@ code {
   height: 200px;
   background-color: brown;
   height: 100%;
-  padding: 3rem;
+  padding-top: 5rem;
   overflow: auto;
 }
+
 
 .cardImageContainer{
   height: 200px;
@@ -43,7 +44,7 @@ code {
 
 .footer, .header{
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   z-index: 1;
   position: fixed;
   left:0;
@@ -51,8 +52,26 @@ code {
   background-color: aqua;
 }
 
+.headerTop{
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.headerBottom{
+  height: 3rem;
+  width: auto;
+  border: solid;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem;
+}
+
 .header{
   top: 0;
+  display: flex;
+  /* align-items: center; */
 }
 
 .footer{
