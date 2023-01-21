@@ -14,21 +14,39 @@ const data = [
     address: "3522 Adams Ave",
     cuisine: "Korean" 
     },
+    {
+    name: "Luigi's pizza",
+    image:"https://images.squarespace-cdn.com/content/v1/5982fa4fe58c62cb28091fa4/1578399820670-9PSKMMZQMBNGFTTTJ9PZ/Pizzeria",
+    address: "3400 pizza st",
+    cuisine: "Italian"
+    }
     
 ]
 
 
 
 function Index(props){
+    data.sort((a,b) => {
+        if (a.name > b.name){
+            return 1
+        } else if(a.name < b.name){
+            return -1
+        } else {
+            return 0
+        }
+    })
     return <div className="container">
         <h1>Index Component</h1>
             {data.map((element, index) => (
                 <div className="card">
                     <div className="cardHeader">{element.name}</div>
-                    <img src={element.image}/>
+                    <div className='cardImageContainer'>
+                        <img src={element.image}/>
+                    </div>
                     <div className="cardFooter">
-                        <h3>{element.address}</h3>
-                        <h3>{element.cuisine}</h3>
+                        <span>{element.address}</span>
+                        <br/>
+                        <span>{element.cuisine}</span>
                     </div>
                 </div>
             ))}

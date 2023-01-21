@@ -18,6 +18,7 @@ code {
 
 .card{
   margin-bottom: 3rem;
+  border: solid;
 }
 .container{
   display: flex;
@@ -31,7 +32,12 @@ code {
   overflow: auto;
 }
 
-
+.cardImageContainer{
+  /* display: block; */
+  width: auto;
+  /* aspect-ratio: 16/9; */
+  /* object-fit: cover; */
+}
 
 .footer, .header{
   z-index: 1;
@@ -44,6 +50,7 @@ code {
 .header{
   top: 0;
 }
+
 .footer{
   bottom: 0;
 }
