@@ -1,4 +1,4 @@
-import { useOutletContext } from 'react-router-dom'
+import {Link, useOutletContext } from 'react-router-dom'
 import data from '../dummydata'
 
 function Index(props){
@@ -17,10 +17,9 @@ function Index(props){
         }
     })
     return <div className="container">
-
             {contextdata.map((element, index) => (
                 <div className="card" key={index}>
-                    <div className="cardHeader">{element.name}</div>
+                    <div className="cardHeader"><Link to={`/${element._id}`}>{element.name}</Link></div>
                     <div className='cardImageContainer'>
                         <img src={element.image}/>
                     </div>

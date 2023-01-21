@@ -8,7 +8,7 @@ export const restaurantsLoader = async () => {
     return restaurants
 }
 
-export const restaurantLoader = async () => {
+export const restaurantLoader = async (params) => {
     const response = await fetch(URL + '/restaurant/' + params.id)
     const restaurant = await response.json()
     return restaurant
