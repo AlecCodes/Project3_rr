@@ -1,19 +1,39 @@
-# Frontend Repo
+## Frontend
+---
+#### Frontend Deployment Link
+[Frontend]()
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-##Technologies used
+#### Technology Used
 - React
-- Bootstrap
+- React Router
+- SASS
 
-## Available Scripts
 
-In the project directory, you can run:
+#### Components
+- Header
+    - Title
+    - Search
+    - Nav Buttons
+        - Register
+        - Login
 
-### `npm start`
+- Index/Main
+    - Sub Nav
+        - Home
+        - Write Review
+- Footer
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### Pages/Routes
+- Main
+- Update
+- Review/Show
+
+#### Trello
+[Trello](https://trello.com/b/wjCEpqt5/restaurant-rating-app)
+#### Wireframes
+[Main](./images/Restraunt.png)
+[Show/Update](./images/Show.png)
+[Search](./images/Search.png)
+[Mobile](./images/mobile.png)
