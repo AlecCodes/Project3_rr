@@ -16,8 +16,8 @@ function App() {
         return element
       }
     })
-    console.log('Change handler')
-    console.log(filtered)
+    // console.log('VVVVV - Change handler executed - VVVVVVVV')
+    // console.log(filtered)
     setDataState(filtered)
 
   }
