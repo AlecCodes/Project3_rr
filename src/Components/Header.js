@@ -7,7 +7,9 @@ function Header(props){
                 <h2>RESTAURANT <br/> REVIEW</h2>
             </div>
             <Form>
-                <input type='text' placeholder='Search'/>
+                <input type='text'
+                value={props.value}
+                onChange={props.onChange}/>
                 <input type="submit" value='Search'/>
             </Form>
             <div>

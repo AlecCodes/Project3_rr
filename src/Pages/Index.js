@@ -13,7 +13,7 @@ function Index(props){
     return <div className="container">
 
             {data.map((element, index) => (
-                <div className="card">
+                <div className="card" key={index}>
                     <div className="cardHeader">{element.name}</div>
                     <div className='cardImageContainer'>
                         <img src={element.image}/>
