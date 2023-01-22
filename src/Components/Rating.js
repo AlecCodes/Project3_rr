@@ -16,6 +16,7 @@ const Rating = () => {
         <div className="rating-containter">3</div>
         <div className="rating-containter">4</div>
         <div className="rating-containter">5</div>
+        
       </div>
       <button className="submit-btn">Submit</button>
     </Card>

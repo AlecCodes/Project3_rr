@@ -1,4 +1,4 @@
-/* .star-img-container {
+.star-img-container {
   height: 45px;
   width: 45px;
   border-radius: 50%;
@@ -11,4 +11,38 @@
 .title {
   color: white;
   margin: 2rem 0 1rem 0;
-} */
+}
+
+.text{
+  color: hsl(217, 12%, 63%);
+  margin-bottom: 1.25rem;
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+  font-size: 20px;;
+}
+
+.rating{
+  display:flex;
+  justify-content: center;
+  align-items: space-between;
+  margin-bottom:2rem;
+  color:white;
+}
+
+.rating-container {
+  text-align: center;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  background-color: hsl(211, 19%, 24%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:hsl(217, 12%, 63%);
+  font-weight: 700;
+}
+
+.rating-container.active {
+color: white;
+background-color: hsl(217, 12%, 63%);
+}

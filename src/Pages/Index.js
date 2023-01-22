@@ -21,7 +21,7 @@ function Index(props){
                 <div className="card" key={index}>
                     <div className="cardHeader"><Link to={`/${element._id}`}>{element.name}</Link></div>
                     <div className='cardImageContainer'>
-                        <img src={element.image}/>
+                        <img src={element.image} alt=""/>
                     </div>
                     <div className="cardFooter">
                         <span>{element.address}</span>
