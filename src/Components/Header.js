@@ -1,4 +1,4 @@
-import {Form} from 'react-router-dom'
+import {Link, Form} from 'react-router-dom'
 
 function Header(props){
     return <div className="header">
@@ -19,7 +19,9 @@ function Header(props){
         </div>
         <div className="headerBottom">
                 <div>Restaurants</div>
-                <div>Write Review</div>
+                <Link to='create'>
+                    <div>Write Review</div>
+                </Link>
         </div>
     </div>
 }
