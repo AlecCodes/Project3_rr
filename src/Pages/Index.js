@@ -1,7 +1,7 @@
-import {Link, useOutletContext } from 'react-router-dom'
-import data from '../dummydata'
+import {Link, useOutletContext} from 'react-router-dom'
 
 function Index(props){
+
     //See the context prop of Outlet component in app.js
     const contextdata = useOutletContext()
     // console.log("CONTEXT DATA IN INDEX ROUTE - VVVVVV")

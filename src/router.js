@@ -1,5 +1,4 @@
-import {useOutletContext, createBrowserRouter, createRoutesFromElements, Route} from "react-router-dom"
-import {Header} from './Components/Header'
+import {createBrowserRouter, createRoutesFromElements, Route} from "react-router-dom"
 import Index from './Pages/Index'
 import Show from './Pages/Show'
 import App from './App'
@@ -9,7 +8,7 @@ import { restaurantLoader, restaurantsLoader } from "./loaders"
 
 const router = createBrowserRouter(createRoutesFromElements(
     <Route path="/" element={<App/>} loader={restaurantsLoader}>
-        <Route path="" element={<Index/>}/>
+        <Route path="" element={<Index/>} loader={restaurantsLoader}/>
         <Route path="/:id" element={<Show/>} loader={restaurantLoader}/>
         <Route path="create" element={<Create/>} action={createAction}/>
         <Route path="update/:id" action={updateAction}/>

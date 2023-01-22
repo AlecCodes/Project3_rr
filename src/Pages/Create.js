@@ -5,9 +5,9 @@ function Create(props){
         <div className='createPage'>
             <h1>Write a New Review</h1>
             <Form action='/create' method='post'>
-                <input type='text' name='name'/>
-                <input type='text' name='image'/>
-                <input type='text' name='cuisine'/>
+                <input type='text' name='name' placeholder='Name'/>
+                <input type='text' name='image' placeholder='Image URL'/>
+                <input type='text' name='cuisine' placeholder='Cuisine/style'/>
                 <input type='submit'/>
             </Form>
         </div>
