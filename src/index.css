@@ -12,6 +12,7 @@ code {
     monospace;
 } */
 
+
 *{
   margin:0;
 }
@@ -22,7 +23,7 @@ code {
   border: solid;
 }
 
-.container{
+.createPage, .container{
   display: flex;
   flex-direction: column;
   align-items: center;
