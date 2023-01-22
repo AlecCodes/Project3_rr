@@ -27,6 +27,7 @@
   align-items: space-between;
   margin-bottom:2rem;
   color:white;
+  
 }
 
 .rating-container {
@@ -42,7 +43,32 @@
   font-weight: 700;
 }
 
-.rating-container.active {
+.rating-container:active {
 color: white;
 background-color: hsl(217, 12%, 63%);
+}
+
+.rating-container:hover {
+  background-color: hsl(25, 97%, 53%);
+  color: white;
+}
+
+.submit-button{
+  cursor:pointer;
+  text-transform: uppercase;
+  border:0;
+  outline:0;
+  width: 100%;
+  padding: 12px 0;
+  background-color: hsl(25, 97%, 53%);
+  color: white;
+  border-radius: 25px;
+  letter-spacing: 1.5px;
+  font-family: inherit;
+  font-weight: 700;
+}
+
+.submit-button:active{
+  background-color: white;
+  color: hsl(25, 97%, 53%)
 }
