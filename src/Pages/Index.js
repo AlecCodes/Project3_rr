@@ -1,4 +1,5 @@
 import {Form, Link, useLoaderData} from 'react-router-dom'
+import {useState} from 'react'
 
 function Index(props){
     //See the context prop of Outlet component in app.js
@@ -6,8 +7,26 @@ function Index(props){
     // console.log("CONTEXT DATA IN INDEX ROUTE - VVVVVV")
     // console.log(contextdata)
     const data = useLoaderData()
+    const [dataState, setDataState] = useState(data)
 
-    data.sort((a,b) => {
+    const [formState, setFormState] = useState('')
+
+    function changeHandler(event){
+        const filtered = [...data].filter((element) => {
+            if(formState.toUpperCase() === element.name.substring(0,formState.length).toUpperCase()){
+                return element
+            }
+        })
+        setFormState(event.target.value)
+        setDataState(filtered)
+    }
+    
+    function clearFilter(event){
+        setFormState('')
+        setDataState(data)
+    }
+
+    dataState.sort((a,b) => {
         if (a.name > b.name){
             return 1
         } else if(a.name < b.name){
@@ -19,14 +38,19 @@ function Index(props){
     return <div className="container">
             <div className='controlPanel'>
                 <Form>
-                    <input type='text'/>
+                    <input
+                    value = {formState}
+                    onChange = {changeHandler}
+                    placeholder='Real time search!' 
+                    type='text'/>
                     <br/>
                     <br/>
                     <input type='submit'/>
+                    <button onClick={clearFilter}>Clear</button>
                 </Form>
             </div>
             <div className='cardContainer'>
-            {data.map((element, index) => (
+            {dataState.map((element, index) => (
                 <div className="card" key={index}>
                     <div className="cardHeader"><Link to={`/${element._id}`}>{element.name}</Link></div>
                     <div className='cardImageContainer'>
