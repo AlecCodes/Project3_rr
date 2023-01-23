@@ -1,12 +1,13 @@
-import {Form, Link, useOutletContext} from 'react-router-dom'
+import {Form, Link, useLoaderData} from 'react-router-dom'
 
 function Index(props){
     //See the context prop of Outlet component in app.js
-    const contextdata = useOutletContext()
+    // const contextdata = useOutletContext()
     // console.log("CONTEXT DATA IN INDEX ROUTE - VVVVVV")
     // console.log(contextdata)
+    const data = useLoaderData()
 
-    contextdata.sort((a,b) => {
+    data.sort((a,b) => {
         if (a.name > b.name){
             return 1
         } else if(a.name < b.name){
@@ -19,11 +20,13 @@ function Index(props){
             <div className='controlPanel'>
                 <Form>
                     <input type='text'/>
+                    <br/>
+                    <br/>
                     <input type='submit'/>
                 </Form>
             </div>
             <div className='cardContainer'>
-            {contextdata.map((element, index) => (
+            {data.map((element, index) => (
                 <div className="card" key={index}>
                     <div className="cardHeader"><Link to={`/${element._id}`}>{element.name}</Link></div>
                     <div className='cardImageContainer'>
