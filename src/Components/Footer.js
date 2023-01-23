@@ -1,7 +1,10 @@
+import { SocialIcon } from 'react-social-icons';
+
 function Footer(props){
     return(
     <footer className="footer">
-        <h1>footer footer fooeter</h1>
+        <SocialIcon network="twitter" className='social'/>
+        <SocialIcon network="reddit" className='social'/>
     </footer>
     )
 }

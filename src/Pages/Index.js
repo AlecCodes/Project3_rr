@@ -35,35 +35,38 @@ function Index(props){
             return 0
         }
     })
-    return <div className="container">
-            <div className='controlPanel'>
-                <Form>
-                    <input
-                    value = {formState}
-                    onChange = {changeHandler}
-                    placeholder='Search by Name' 
-                    type='text'/>
-                    <br/>
-                    <br/>
-                    <input type='submit'/>
-                    <button onClick={clearFilter}>Clear</button>
-                </Form>
-            </div>
-            <div className='cardContainer'>
-            {dataState.map((element, index) => (
-                <div className="card" key={index}>
-                    <div className="cardHeader"><Link to={`/${element._id}`}>{element.name}</Link></div>
-                    <div className='cardImageContainer'>
-                        <img src={element.image} alt=""/>
-                    </div>
-                    <div className="cardFooter">
-                        <span>{element.address}</span>
-                        <br/>
-                        <span>{element.cuisine}</span>
-                    </div>
+    return <div className='container'>
+    <main className='main'>
+        <aside className='sidebar'>
+        <Form>
+            <input
+                value = {formState}
+                onChange = {changeHandler}
+                placeholder='Search by Name' 
+                type='text'/>
+                <br/>
+                <br/>
+            <input type='submit'/>
+                <button onClick={clearFilter}>Clear</button>
+        </Form>
+    </aside>
+        <div className='cards'>
+        {dataState.map((element, index) => (
+            <div className='card' key={index}>
+                <img src={element.image} alt={element.name} className='cardimage'/>
+                <div className='cardcontent'>
+                    <h2>{element.name}</h2>
+                    <p>{element.address}</p>
+                    <p>{element.name} review snippet</p>
                 </div>
-            ))}
+                <div className='cardfooter'>
+                    <p>{element.cuisine}</p>
+                    <Link to={`/${element._id}`}>Review</Link>
+                </div>
             </div>
+        ))}
         </div>
+    </main>
+</div>
 }
 export default Index
