@@ -8,19 +8,18 @@
   border: solid;
 }
 
-
 .createPage, .cardContainer{
   display: flex;
   flex-direction: column;
   align-items: center;
   left: 0;
   width: 100%;
-  height: 200px;
+  height: 100vh;
   background-color: brown;
-  height: 100%;
   padding-top: 10rem;
   overflow: auto;
 }
+
 
 .controlPanel{
   height: 100%;

@@ -20,7 +20,7 @@ function Index(props){
         setFormState(event.target.value)
         setDataState(filtered)
     }
-    
+
     function clearFilter(event){
         setFormState('')
         setDataState(data)
@@ -41,7 +41,7 @@ function Index(props){
                     <input
                     value = {formState}
                     onChange = {changeHandler}
-                    placeholder='Real time search!' 
+                    placeholder='Search by Name' 
                     type='text'/>
                     <br/>
                     <br/>
