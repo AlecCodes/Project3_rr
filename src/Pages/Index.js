@@ -1,7 +1,6 @@
-import {Link, useOutletContext} from 'react-router-dom'
+import {Form, Link, useOutletContext} from 'react-router-dom'
 
 function Index(props){
-
     //See the context prop of Outlet component in app.js
     const contextdata = useOutletContext()
     // console.log("CONTEXT DATA IN INDEX ROUTE - VVVVVV")
@@ -17,6 +16,13 @@ function Index(props){
         }
     })
     return <div className="container">
+            <div className='controlPanel'>
+                <Form>
+                    <input type='text'/>
+                    <input type='submit'/>
+                </Form>
+            </div>
+            <div className='cardContainer'>
             {contextdata.map((element, index) => (
                 <div className="card" key={index}>
                     <div className="cardHeader"><Link to={`/${element._id}`}>{element.name}</Link></div>
@@ -30,6 +36,7 @@ function Index(props){
                     </div>
                 </div>
             ))}
+            </div>
         </div>
 }
 export default Index

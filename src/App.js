@@ -27,7 +27,7 @@ function App() {
   return (
     <div className="App">
       <Header value={formState} onChange={changeHandler}/>
-      <Outlet context={dataState} />
+      <Outlet context={dataState}/>
       {/* <Rating /> */}
       <Footer/>
     </div>
