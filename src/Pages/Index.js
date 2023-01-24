@@ -35,11 +35,12 @@ function Index(props){
             return 0
         }
     })
-    return <div className='container'>
+    return <div>
     <main className='main'>
         <aside className='sidebar'>
         <Form>
             <input
+                className='search'
                 value = {formState}
                 onChange = {changeHandler}
                 placeholder='Search by Name' 
