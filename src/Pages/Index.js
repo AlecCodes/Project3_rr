@@ -36,6 +36,14 @@ function Index(props){
         }
     })
     return <div>
+        <nav className='navbar'>
+            <Link to="/">
+                <div>Home</div>
+            </Link>
+            <Link to='create'>
+                <div>Write Review</div>
+            </Link>
+        </nav>
     <main className='main'>
         <aside className='sidebar'>
         <Form>

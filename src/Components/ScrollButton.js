@@ -27,7 +27,7 @@ window.addEventListener('scroll', toggleVisible);
 return (
     <Button onClick={scrollToTop}
 	    style={{display: visible ? 'inline' : 'none'}}>
-        <button>Return To Top</button>
+        <button className='return'>Return To Top</button>
     </Button>
     
 );
