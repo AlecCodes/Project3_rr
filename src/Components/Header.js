@@ -1,16 +1,17 @@
-import {Link, Form} from 'react-router-dom'
-
 function Header(props){
     return <div className="header">
         <h1>Hungr</h1>
-        <nav className='navbar'>
-            <Link to="/">
-                <div>Home</div>
-            </Link>
-            <Link to='create'>
-                <div>Write Review</div>
-            </Link>
-        </nav>
+        <div className='main-banner' id='main-banner'>
+            <div className='imgban' id='imgban3'>
+
+            </div>
+            <div className='imgban' id='imgban2'>
+
+            </div>
+            <div className='imgban' id='imgban1'>
+
+            </div>
+        </div>
     </div>
 }
 export default Header
