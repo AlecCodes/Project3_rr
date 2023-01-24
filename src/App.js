@@ -4,6 +4,7 @@ import {Outlet, useLoaderData} from 'react-router-dom'
 import Footer from './Components/Footer'
 import Rating from './Components/Rating'
 import {useState} from 'react'
+import ScrollButton from './Components/ScrollButton';
 //import data from './dummydata'
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
     <div className="App">
       <Header/>
       <Outlet/>
+      <ScrollButton/>
       <Footer/>
     </div>
   );
