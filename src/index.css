@@ -60,10 +60,11 @@ a {
   margin-inline-end: 0px;
   text-decoration: none;
   color: black;
+  transition: color 0.3s ease-in-out;
 }
 
 a:hover{
-  color: lightblue;
+  color: rgb(0, 229, 255);
 }
 
 .header {
@@ -71,6 +72,8 @@ a:hover{
 }
 
 .header h1{
+  font-size: 4em;
+  text-shadow: 2px 2px 4px rgb(0, 229, 255);
   margin-top: 20px;
   margin-bottom: 0;
 }
@@ -87,6 +90,29 @@ a:hover{
   border-radius: 4px;
 }
 
+.clear {
+  margin-left: 5px;
+}
+
+.clear, 
+.searchsubmit {
+  height: 35px;
+  width: 70px;
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.4);
+  transition: box-shadow 0.3s ease-in-out;
+  border-radius: 4px;
+}
+
+.clear:hover {
+  box-shadow: 1px 1px 2px 2px rgba(255, 0, 0, 0.4);
+  background-color:rgba(255, 0, 0, 0.4)
+}
+
+.searchsubmit:hover {
+  box-shadow: 1px 1px 2px 2px rgba(0, 255, 34, 0.4);
+  background-color:rgba(0, 255, 34, 1)
+}
+
 .navbar {
   margin: 0;
   display: flex;
@@ -95,8 +121,10 @@ a:hover{
 
 .navbar a {
   padding-right: 10px;
+  padding-left: 5px;
   border-left: 2px solid black;
 }
+
 
 .main {
   display: flex;

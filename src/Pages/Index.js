@@ -47,8 +47,8 @@ function Index(props){
                 type='text'/>
                 <br/>
                 <br/>
-            <input type='submit'/>
-                <button onClick={clearFilter}>Clear</button>
+            <input className='searchsubmit' type='submit'/>
+                <button className='clear' onClick={clearFilter}>Clear</button>
         </Form>
     </aside>
         <div className='cards'>
