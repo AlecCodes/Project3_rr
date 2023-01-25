@@ -1,6 +1,5 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, Form } from "react-router-dom";
 // import { useOutletContext } from 'react-router-dom'
-
 
 function Show(props) {
   // const restaurant = useLoaderData();
@@ -8,15 +7,24 @@ function Show(props) {
 
   return (
     <div className="showContainer">
-      <div className="showHeader">{restaurant.name} NAME </div>
+      <Form action={`/update/${restaurant._id}`} method="post">
+        <input type="text" name="name" placeholder="Restaurant Name" />
+        <br />
+        <input type="text" name="image" placeholder="Restaurant Image" />
+        <br />
+        <input type="text" name="cuisine" placeholder="Cuisine" />
+        <br />
+        <input type="submit" value="Update Restaurant" />
+      </Form>
+      <div className="showHeader">{restaurant.name}</div>
       <div className="showImageContainer">
         <img src={restaurant.image} />
       </div>
       <div className="showDetails">
-        <p>{restaurant.address} Address </p>
         <p>{restaurant.cuisine} Cuisine</p>
       </div>
     </div>
-  );
+  )
+  
 }
 export default Show;
