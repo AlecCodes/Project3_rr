@@ -1,12 +1,10 @@
 import { useLoaderData } from "react-router-dom";
 // import { useOutletContext } from 'react-router-dom'
-import data from "../dummydata";
-import Card from '../Components/Card'
-import Rating from '../Components/Rating'
+
 
 function Show(props) {
   // const restaurant = useLoaderData();
-  const restaurant = data[0];
+  const restaurant = useLoaderData();
 
   return (
     <div className="showContainer">
