@@ -73,7 +73,7 @@ function Index(props){
                 </div>
                 <div className='cardfooter'>
                     <p>{element.cuisine}</p>
-                    <Link to={`restaurant/${element._id}`}>Review</Link>
+                    <Link to={`/${element._id}`}>Review</Link>
                 </div>
             </div>
         ))}
