@@ -8,7 +8,7 @@ import { restaurantLoader, restaurantsLoader } from "./loaders"
 
 const router = createBrowserRouter(createRoutesFromElements(
     <Route path="/" element={<App/>}>
-        <Route path="" element={<Index/>} loader={restaurantsLoader}/>
+        <Route path="/" element={<Index/>} loader={restaurantsLoader}/>
         <Route path="/:id" element={<Show/>} loader={restaurantLoader}/>
         <Route path="create" element={<Create/>} action={createAction}/>
         <Route path="update/:id" action={updateAction}/>

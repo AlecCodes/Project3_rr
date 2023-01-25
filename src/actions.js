@@ -40,11 +40,8 @@ export const  updateAction = async ({request, params}) => {
 }
 
 export const deleteAction = async ({params}) => {
-    await fetch(URL = `/restaurant/${params.id}`, {
-        method: 'delete',
-        headers: {
-            'Content-Type': 'application/json'
-        }
+    await fetch(URL + `/restaurant/${params.id}`, {
+        method: 'delete'
     })
     return redirect('/')
 }
