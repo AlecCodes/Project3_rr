@@ -1,6 +1,5 @@
 import { useLoaderData, Form } from "react-router-dom";
-// import Card from '../Components/Card'
-// import Rating from '../Components/Rating'
+// import { useOutletContext } from 'react-router-dom'
 
 function Show(props) {
   // const restaurant = useLoaderData();

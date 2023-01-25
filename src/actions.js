@@ -1,4 +1,5 @@
-import { redirect } from 'react-router-dom';
+import { redirect, setState } from 'react-router-dom';
+
 
 let URL = 'https://backend-restaurant-review.onrender.com';
 
@@ -40,11 +41,8 @@ export const  updateAction = async ({request, params}) => {
 }
 
 export const deleteAction = async ({params}) => {
-    await fetch(URL = `/restaurant/${params.id}`, {
-        method: 'delete',
-        headers: {
-            'Content-Type': 'application/json'
-        }
+    await fetch(URL + `/restaurant/${params.id}`, {
+        method: 'delete'
     })
     return redirect('/')
 }

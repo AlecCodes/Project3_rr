@@ -1,5 +1,7 @@
 import {Form, Link, useLoaderData} from 'react-router-dom'
 import {useState} from 'react'
+import Delete from '../Components/Delete'
+
 
 function Index(props){
     //See the context prop of Outlet component in app.js
@@ -41,7 +43,7 @@ function Index(props){
                 <div>Home</div>
             </Link>
             <Link to='create'>
-                <div>Write Review</div>
+                <div>Add Restaurant</div>
             </Link>
         </nav>
     <main className='main'>
@@ -62,6 +64,7 @@ function Index(props){
         <div className='cards'>
         {dataState.map((element, index) => (
             <div className='card' key={index}>
+                <Delete id={element._id} />
                 <img src={element.image} alt={element.name} className='cardimage'/>
                 <div className='cardcontent'>
                     <h2>{element.name}</h2>
