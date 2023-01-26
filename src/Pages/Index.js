@@ -1,6 +1,6 @@
 import {Form, Link, useLoaderData} from 'react-router-dom'
 import {useState} from 'react'
-
+import Delete from '../Components/Delete'
 
 
 function Index(props){
@@ -37,50 +37,53 @@ function Index(props){
             return 0
         }
     })
-    return <div>
-        <nav className='navbar'>
-            <Link to="/">
-                <div>Register</div>
-            </Link>
-            <Link to="/">
-                <div>Log In</div>
-            </Link>
-            <Link to='create'>
-                <div>Add Restaurant</div>
-            </Link>
-        </nav>
-    <main className='main'>
+    return <div className='main'>
         <aside className='sidebar'>
-        <Form>
-            <input
-                className='search'
-                value = {formState}
-                onChange = {changeHandler}
-                placeholder='Search by Name' 
-                type='text'/>
-                <br/>
-                <br/>
-            <input className='searchsubmit' type='submit'/>
+
+            <Form>
+                <input
+                    className='search'
+                    value = {formState}
+                    onChange = {changeHandler}
+                    placeholder='Search by Name' 
+                    type='text'/>
+                    <br/>
+                <input className='searchsubmit' type='submit'/>
                 <button className='clear' onClick={clearFilter}>Clear</button>
-        </Form>
-    </aside>
-        <div className='cards'>
+            </Form>
+
+            <nav className='navbar'>
+                <Link to="/">
+                    <div>Register</div>
+                </Link>
+                <Link to="/">
+                    <div>Log In</div>
+                </Link>
+                <Link to='create'>
+                    <div>Add Restaurant</div>
+                </Link>
+            </nav>
+        
+        </aside>
+
+        <div className='container'>
         {dataState.map((element, index) => (
-            <div className='card' key={index}>
+
+            <div className='card stacked' key={index}>
+
                 <Link to={`/${element._id}`}><img src={element.image} alt={element.name} className='cardimage'/></Link>
+
                 <div className='cardcontent'>
-                    <h2>{element.name}</h2>
-                    <p>{element.address}</p>
-                    <p>{element.name} review snippet</p>
-                </div>
-                <div className='cardfooter'>
+                    <p className='cardtitle'>{element.name}</p>
+                    <p className='cardaddress'>{element.address}</p>
                     <p>{element.cuisine}</p>
                     <Link to={`/${element._id}`}>How Was It?</Link>
                 </div>
+
             </div>
+
         ))}
         </div>
-    </main>
-</div>
+    </div>
 }
 export default Index
