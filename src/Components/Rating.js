@@ -1,5 +1,5 @@
 import Card from './Card'
-import './Rating.css'
+import '../Rating.css'
 import starImg from '../media/icon-star.svg'
 import React, { useState } from 'react'
 
