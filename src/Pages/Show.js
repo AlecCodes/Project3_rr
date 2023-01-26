@@ -1,4 +1,6 @@
 import { useLoaderData, Form } from "react-router-dom";
+// import { useOutletContext } from 'react-router-dom'
+import Delete from '../Components/Delete';
 import Rating from "../Components/Rating";
 
 function Show(props) {
@@ -13,10 +15,11 @@ function Show(props) {
         <br />
         <input type="text" name="image" placeholder="Restaurant Image" />
         <br />
-        <input type="text" name="cuisine" placeholder="Cuisine" />
+        <input type="text" name="type" placeholder="Food Type" />
         <br />
         <input type="submit" value="Update Restaurant" />
       </Form>
+        <Delete id={restaurant._id}/>
       <div className="showHeader">{restaurant.name}</div>
       <div className="showImageContainer">
         <img src={restaurant.image} />
