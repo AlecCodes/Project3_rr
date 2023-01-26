@@ -2,7 +2,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-bottom: 1.5 rem;
+  margin-bottom: 1.5rem
 }
 
 .selected {
@@ -10,7 +10,7 @@
   border-radius: 25px;
   padding: 8px 12px;
   background-color: hsl(211, 19%, 24%);
-  margin: 1.5rem;
+  margin: 1.5rem auto;
   text-align: center;
   color: hsl(25, 75%, 46%)
 }
@@ -25,4 +25,11 @@
   color: hsl(217, 12%, 63%);
   font-size: .92rem;
   line-height: 1.4rem;
+  text-align: center;
+}
+
+p {
+  color: hsl(25, 75%, 46%);
+  text-align: center;
+  font-weight: 700;
 }
