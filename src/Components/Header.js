@@ -1,6 +1,8 @@
+import { Link } from 'react-router-dom'
+
 function Header(props){
     return <div className="header">
-        <h1>Hungr</h1>
+        <Link to='/'><h1>Hungr</h1></Link>
         <div className='main-banner' id='main-banner'>
             <div className='imgban' id='imgban3'>
 

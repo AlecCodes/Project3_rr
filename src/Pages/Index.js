@@ -1,6 +1,6 @@
 import {Form, Link, useLoaderData} from 'react-router-dom'
 import {useState} from 'react'
-import Delete from '../Components/Delete'
+
 
 
 function Index(props){
@@ -40,7 +40,10 @@ function Index(props){
     return <div>
         <nav className='navbar'>
             <Link to="/">
-                <div>Home</div>
+                <div>Register</div>
+            </Link>
+            <Link to="/">
+                <div>Log In</div>
             </Link>
             <Link to='create'>
                 <div>Add Restaurant</div>
@@ -64,8 +67,7 @@ function Index(props){
         <div className='cards'>
         {dataState.map((element, index) => (
             <div className='card' key={index}>
-                <Delete id={element._id} />
-                <img src={element.image} alt={element.name} className='cardimage'/>
+                <Link to={`/${element._id}`}><img src={element.image} alt={element.name} className='cardimage'/></Link>
                 <div className='cardcontent'>
                     <h2>{element.name}</h2>
                     <p>{element.address}</p>
@@ -73,7 +75,7 @@ function Index(props){
                 </div>
                 <div className='cardfooter'>
                     <p>{element.cuisine}</p>
-                    <Link to={`/${element._id}`}>Review</Link>
+                    <Link to={`/${element._id}`}>How Was It?</Link>
                 </div>
             </div>
         ))}
