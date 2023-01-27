@@ -62,7 +62,19 @@ export const logoutAction = async() =>{
     return redirect('/')
 }
 
-export const registerAction = async({params}) => {
-    console.log('REGISTERED')
+export const registerAction = async({request}) => {
+    const formData = await request.formData()
+    const newUser = {
+        username: formData.get("username"),
+        password: formData.get("password")
+    }
+    fetch(URL + '/auth/signup',{
+        method:'post',
+        headers: {
+            "Content-Type":"application/json"
+        },
+        body:JSON.stringify(newUser)
+    })
+    console.log(newUser)
     return redirect('/')
 }
