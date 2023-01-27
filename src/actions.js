@@ -51,3 +51,18 @@ export const deleteAction = async ({params}) => {
     })
     return redirect('/')
 }
+
+export const loginAction = async({params}) =>{
+    console.log('login!!!')
+    return redirect('/')
+}
+
+export const logoutAction = async() =>{
+    console.log("Logout~!")
+    return redirect('/')
+}
+
+export const registerAction = async({params}) => {
+    console.log('REGISTERED')
+    return redirect('/')
+}
