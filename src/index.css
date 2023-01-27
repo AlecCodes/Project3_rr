@@ -44,7 +44,7 @@ body {
 }
 
 .header h1{
-  font-size: 4em;
+  font-size: 7em;
   text-shadow: 2px 2px 4px rgb(0, 229, 255);
   margin-top: 20px;
 }
@@ -107,7 +107,7 @@ img {
 }
 
 .main-banner #imgban2 {
-  background-image: url(https://w0.peakpx.com/wallpaper/776/861/HD-wallpaper-hamburger-flames-fast-food-food.jpg); 
+  background-image: url(https://www.google.com/imgres?imgurl=https%3A%2F%2Fimages.pexels.com%2Fphotos%2F2679501%2Fpexels-photo-2679501.jpeg%3Fcs%3Dsrgb%26dl%3Dpexels-shantanu-pal-2679501.jpg%26fm%3Djpg&imgrefurl=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Findian%2520food%2F&tbnid=hfC6YhiFIAwGGM&vet=12ahUKEwjw6N_hpOb8AhWErycCHRVYCGkQMyhVegUIARCxAQ..i&docid=xe0K02QS9YRfqM&w=3399&h=4249&q=food%20images%20hd&ved=2ahUKEwjw6N_hpOb8AhWErycCHRVYCGkQMyhVegUIARCxAQ); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
