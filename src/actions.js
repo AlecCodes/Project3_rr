@@ -6,11 +6,14 @@ import { redirect, setState } from 'react-router-dom';
 
 //DEV URL
 const URL = "http://localhost:4000"
+let currentUser = JSON.parse(localStorage.getItem("token")).username
+
 
 
 export const createAction = async ({request}) => {
     const formData = await request.formData()
     const newRestaurant = {
+        creator: currentUser,
         name: formData.get("name"),
         image: formData.get("image"),
         cuisine: formData.get("cuisine"),
@@ -23,6 +26,7 @@ export const createAction = async ({request}) => {
         },
         body: JSON.stringify(newRestaurant)
     })
+    console.log(currentUser)
     return redirect('/')
 }
 

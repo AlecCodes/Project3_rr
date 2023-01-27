@@ -1,11 +1,10 @@
 import {Form, Link, useLoaderData} from 'react-router-dom'
-import {useState} from 'react'
+import {useState,useContext} from 'react'
 import Delete from '../Components/Delete'
 
 
 function Index(props){
     let currentUser = JSON.parse(localStorage.getItem("token")).username
-
 
     const data = useLoaderData()
     const [dataState, setDataState] = useState(data)
