@@ -71,8 +71,8 @@ export const loginAction = async({request}) => {
     return redirect('/')}
 
 export const logoutAction = async() =>{
-    localStorage.setItem('token','')
-    localStorage.setItem('currentUser','')
+    localStorage.setItem('token',JSON.stringify({token: null, username:"Anonymous eater"}))
+//    localStorage.setItem('currentUser','')
     console.log("Logout~!")
     return redirect('/')
 }

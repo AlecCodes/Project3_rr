@@ -4,10 +4,9 @@ import Delete from '../Components/Delete'
 
 
 function Index(props){
-    //See the context prop of Outlet component in app.js
-    // const contextdata = useOutletContext()
-    // console.log("CONTEXT DATA IN INDEX ROUTE - VVVVVV")
-    // console.log(contextdata)
+    let currentUser = JSON.parse(localStorage.getItem("token")).username
+
+
     const data = useLoaderData()
     const [dataState, setDataState] = useState(data)
 
@@ -39,7 +38,9 @@ function Index(props){
     })
     return <div className='main'>
         <aside className='sidebar'>
-
+            <div>
+                <p>{`Welcome, ${currentUser}!`}</p>
+            </div>
             <Form>
                 <input
                     className='search'
