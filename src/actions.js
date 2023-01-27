@@ -66,10 +66,14 @@ export const loginAction = async({request}) =>{
         body:JSON.stringify(User)
     })
     .then(response => response.json())
-    .then(data => console.log(data))
+    .then(data => localStorage.setItem('token', data.token))
+    .then(localStorage.setItem('currentUser', User.username))
+    // .then(data => console.log(data))
     return redirect('/')}
 
 export const logoutAction = async() =>{
+    localStorage.setItem('token','')
+    localStorage.setItem('currentUser','')
     console.log("Logout~!")
     return redirect('/')
 }
