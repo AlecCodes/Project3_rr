@@ -1,6 +1,7 @@
 import { useLoaderData, Form } from "react-router-dom";
 // import { useOutletContext } from 'react-router-dom'
 import Delete from '../Components/Delete';
+import Rating from "../Components/Rating";
 
 function Show(props) {
   // const restaurant = useLoaderData();
@@ -8,6 +9,7 @@ function Show(props) {
 
   return (
     <div className="showContainer">
+      <Rating />
       <Form action={`/update/${restaurant._id}`} method="post">
         <input type="text" name="name" placeholder="Restaurant Name" />
         <br />

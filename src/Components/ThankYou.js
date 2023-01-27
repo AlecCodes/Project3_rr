@@ -1,8 +1,6 @@
 import React from 'react'
 import Card from './Card'
-
-import './ThankYou.css'
-
+import '../ThankYou.css'
 import thankYouImg from '../media/illustration-thank-you.svg'
 
 const ThankYou = ({ rating }) => {
@@ -11,15 +9,10 @@ const ThankYou = ({ rating }) => {
       <div className="thank-you-img-container">
         <img src={thankYouImg} alt="" />
       </div>
-
       <div className="selected">
-        <p>You selected 5 out of 5</p>
+        <p>You selected {rating} out of 5 stars</p>
       </div>
-
-      <h2 className="title">Thank you!</h2>
-      <p className="text">
-        We appreciate you taking the time to give a rating!
-      </p>
+      <p>THANK YOU FOR YOUR INPUT!</p>
     </Card>
   )
 }
