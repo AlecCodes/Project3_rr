@@ -1,7 +1,12 @@
 import { redirect, setState } from 'react-router-dom';
 
 
-let URL = 'https://backend-restaurant-review.onrender.com';
+//let URL = 'https://backend-restaurant-review.onrender.com';
+
+
+//DEV URL
+const URL = "http://localhost:4000"
+
 
 export const createAction = async ({request}) => {
     const formData = await request.formData()

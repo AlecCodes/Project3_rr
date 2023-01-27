@@ -53,14 +53,19 @@ function Index(props){
             </Form>
 
             <nav className='navbar'>
-                <Link to="/">
+                <Link to="signup">
                     <div>Register</div>
                 </Link>
-                <Link to="/">
+                <Link to="login">
                     <div>Log In</div>
                 </Link>
                 <Link to='create'>
                     <div>Add Restaurant</div>
+                </Link>
+                <br/>
+                {/* //Wrap this in logic so it dissapears when logged out? */}
+                <Link to='logout'>
+                    <div>Logout</div>
                 </Link>
             </nav>
         

@@ -3,6 +3,9 @@ import Index from './Pages/Index'
 import Show from './Pages/Show'
 import App from './App'
 import Create from './Pages/Create'
+import Login from './Pages/Login'
+import Logout from './Pages/Logout'
+import Signup from './Pages/Signup'
 import { createAction, deleteAction, updateAction } from "./actions"
 import { restaurantLoader, restaurantsLoader } from "./loaders"
 
@@ -13,6 +16,9 @@ const router = createBrowserRouter(createRoutesFromElements(
         <Route path="create" element={<Create/>} action={createAction}/>
         <Route path="update/:id" action={updateAction}/>
         <Route path="delete/:id" action={deleteAction}/>
+        <Route path="login" element={<Login/>}/>
+        <Route path="logout" element={<Logout/>}/>
+        <Route path="signup" element={<Signup/>}/>
     </Route>
 ))
 
