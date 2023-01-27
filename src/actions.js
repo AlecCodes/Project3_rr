@@ -52,10 +52,22 @@ export const deleteAction = async ({params}) => {
     return redirect('/')
 }
 
-export const loginAction = async({params}) =>{
-    console.log('login!!!')
-    return redirect('/')
-}
+export const loginAction = async({request}) =>{
+    const formData = await request.formData()
+    const User = {
+        username: formData.get("username"),
+        password: formData.get("password")
+    }
+    fetch(URL + '/auth/login',{
+        method:'post',
+        headers: {
+            "Content-Type":"application/json"
+        },
+        body:JSON.stringify(User)
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    return redirect('/')}
 
 export const logoutAction = async() =>{
     console.log("Logout~!")
@@ -75,6 +87,5 @@ export const registerAction = async({request}) => {
         },
         body:JSON.stringify(newUser)
     })
-    console.log(newUser)
     return redirect('/')
 }
