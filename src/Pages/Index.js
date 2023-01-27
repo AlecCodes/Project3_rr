@@ -53,7 +53,7 @@ function Index(props){
             </Form>
 
             <nav className='navbar'>
-                <Link to="signup">
+                <Link to="register">
                     <div>Register</div>
                 </Link>
                 <Link to="login">

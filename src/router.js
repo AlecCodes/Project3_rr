@@ -5,7 +5,7 @@ import App from './App'
 import Create from './Pages/Create'
 import Login from './Pages/Login'
 import Logout from './Pages/Logout'
-import Signup from './Pages/Signup'
+import Register from './Pages/Register'
 import { createAction, deleteAction, updateAction, loginAction, logoutAction, registerAction} from "./actions"
 import { restaurantLoader, restaurantsLoader } from "./loaders"
 
@@ -20,7 +20,7 @@ const router = createBrowserRouter(createRoutesFromElements(
 
         <Route path="logout" element={<Logout/>} action={logoutAction}/>
 
-        <Route path="signup" element={<Signup/>} action={registerAction}/>
+        <Route path="register" element={<Register/>} action={registerAction}/>
     </Route>
 ))
 
