@@ -52,7 +52,7 @@ export const deleteAction = async ({params}) => {
     return redirect('/')
 }
 
-export const loginAction = async({request}) =>{
+export const loginAction = async({request}) => {
     const formData = await request.formData()
     const User = {
         username: formData.get("username"),
@@ -66,9 +66,8 @@ export const loginAction = async({request}) =>{
         body:JSON.stringify(User)
     })
     .then(response => response.json())
-    .then(data => localStorage.setItem('token', data.token))
-    .then(localStorage.setItem('currentUser', User.username))
-    // .then(data => console.log(data))
+    //username and token are bundled together
+    .then(data => localStorage.setItem('token', JSON.stringify(data)))
     return redirect('/')}
 
 export const logoutAction = async() =>{
