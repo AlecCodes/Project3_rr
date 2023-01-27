@@ -8,6 +8,7 @@ export const createAction = async ({request}) => {
     const newRestaurant = {
         name: formData.get("name"),
         image: formData.get("image"),
+        type: formData.get("type"),
         cuisine: formData.get("cuisine"),
         address: formData.get("address")
     }
