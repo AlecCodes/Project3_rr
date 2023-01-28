@@ -5,7 +5,10 @@ import { redirect } from 'react-router-dom';
 
 
 //DEV URL
-const URL = "http://localhost:4000"
+//const URL = "http://localhost:4000"
+
+let URL = "https://rr-api-jwt.onrender.com"
+
 let currentUser = JSON.parse(localStorage.getItem("token")).username
 
 
