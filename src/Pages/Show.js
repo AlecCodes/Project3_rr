@@ -9,15 +9,15 @@ function Show(props) {
     <div className="showForm">
       <Rating className="rating" />
       <Form action={`/update/${restaurant._id}`} method="post">
-        <input type="text" name="name" placeholder="Restaurant Name" />
+        <input type="text" name="name" placeholder="Restaurant Name" className="showinput"/>
         <br />
-        <input type="text" name="image" placeholder="Restaurant Image" />
+        <input type="text" name="image" placeholder="Restaurant Image" className="showinput"/>
         <br />
-        <input type="text" name="type" placeholder="Food Type" />
+        <input type="text" name="type" placeholder="Food Type" className="showinput"/>
         <br />
-        <input type="submit" value="Update" />
+        <input type="submit" value="Update" className="showsubmit"/>
       </Form>
-      <Delete id={restaurant._id} />
+      <Delete id={restaurant._id}/>
       <div className="show-container">
         <div className="image-container">
           <img src={restaurant.image} className="restaurant-image" />
