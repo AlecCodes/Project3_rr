@@ -1,6 +1,5 @@
 import {Form, Link, useLoaderData} from 'react-router-dom'
-import {useState, useEffect} from 'react'
-
+import {useState} from 'react'
 
 function Index(props){
 

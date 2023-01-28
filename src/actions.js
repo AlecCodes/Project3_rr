@@ -73,7 +73,8 @@ export const loginAction = async({request}) => {
     .then(response => response.json())
     //username and token are bundled together
     .then(data => localStorage.setItem('token', JSON.stringify(data)))
-    return redirect('/')}
+    return redirect('/')
+}
 
 export const logoutAction = async() =>{
     localStorage.setItem('token',JSON.stringify({token: null, username:"Anonymous eater"}))
