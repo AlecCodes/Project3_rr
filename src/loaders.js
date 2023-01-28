@@ -6,7 +6,7 @@
 
 //JWT URL
 const URL = "https://rr-api-jwt.onrender.com"
-
+ 
 export const restaurantsLoader = async () => {
     const response = await fetch(URL + '/restaurant')
     const restaurants = await response.json()
