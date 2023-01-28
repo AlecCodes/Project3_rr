@@ -83,6 +83,5 @@
 .rating-container:hover {
   background-color: hsl(25, 97%, 53%);
   color: white;
-  width: 300px;
-  height: 300;
+
 }
