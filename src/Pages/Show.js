@@ -1,14 +1,22 @@
 import { useLoaderData, Form } from "react-router-dom";
+import {useState} from 'react'
 import Delete from "../Components/Delete";
 import Rating from "../Components/Rating";
 
 function Show(props) {
   const restaurant = useLoaderData();
 
+  function clickHandler(number){
+    console.log(number)
+  }
+
+  const [ratingState, setRatingState] = useState(null)
+
   return (
     <div className="showForm">
-      <Rating className="rating" />
+      <Rating className="rating" setRatingState={setRatingState}/>
       <Form action={`/update/${restaurant._id}`} method="post" className='inputform'>
+        <input type='number' name='rating' placeholder="Rating!" value={ratingState}/>
         <input type="text" name="name" placeholder="Restaurant Name" className="showinput"/>
         <br />
         <input type="text" name="image" placeholder="Restaurant Image" className="showinput"/>

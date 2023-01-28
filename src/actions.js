@@ -38,6 +38,7 @@ export const createAction = async ({request}) => {
 export const  updateAction = async ({request, params}) => {
     const formData = await request.formData();
     const newRestaurant = {
+        rating: formData.get("rating"),
         name: formData.get("name"),
         image: formData.get("image"),
         cuisine: formData.get("cuisine"),

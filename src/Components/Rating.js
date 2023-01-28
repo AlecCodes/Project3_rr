@@ -3,7 +3,7 @@ import '../Rating.css'
 import starImg from '../media/icon-star.svg'
 import React, { useState } from 'react'
 
-const Rating = (rating, setRating, setShowThankYouPage) => {
+const Rating = (props, rating, setRating, setShowThankYouPage) => {
   const [activeRatings, setActiveRatings] = useState({
     oneStar: true,
     twoStars: false,
@@ -39,7 +39,7 @@ const Rating = (rating, setRating, setShowThankYouPage) => {
               fourStars: false,
               fiveStars: false
             })
-            setRating(1)
+            props.setRatingState(1)
           }}
         >
           1
@@ -58,7 +58,7 @@ const Rating = (rating, setRating, setShowThankYouPage) => {
               fourStars: false,
               fiveStars: false
             })
-            setRating(2)
+            props.setRatingState(2)
           }}
         >
           2
@@ -77,7 +77,7 @@ const Rating = (rating, setRating, setShowThankYouPage) => {
               fourStars: false,
               fiveStars: false
             })
-            setRating(3)
+            props.setRatingState(3)
           }}
         >
           3
@@ -96,7 +96,7 @@ const Rating = (rating, setRating, setShowThankYouPage) => {
               fourStars: true,
               fiveStars: false
             })
-            setRating(4)
+            props.setRatingState(4)
           }}
         >
           4
@@ -115,15 +115,15 @@ const Rating = (rating, setRating, setShowThankYouPage) => {
               fourStars: false,
               fiveStars: true
             })
-            setRating(5)
+            props.setRatingState(5)
           }}
         >
           5
         </div>
       </div>
-      <button className="submit-btn" onClick={handleSubmit}>
+      {/* <button className="submit-btn" onClick={handleSubmit}>
         Submit
-      </button>
+      </button> */}
     </Square>
   )
 }
