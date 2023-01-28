@@ -3,7 +3,7 @@ import '../Rating.css'
 import starImg from '../media/icon-star.svg'
 import React, { useState } from 'react'
 
-const Rating = (rating, setRating, setShowThankYouPage) => {
+const Rating = (props, rating, setRating, setShowThankYouPage) => {
   const [activeRatings, setActiveRatings] = useState({
     oneStar: true,
     twoStars: false,
@@ -39,7 +39,7 @@ const Rating = (rating, setRating, setShowThankYouPage) => {
               fourStars: false,
               fiveStars: false
             })
-            setRating(1)
+            props.clickHandler(1)
           }}
         >
           1
@@ -58,7 +58,7 @@ const Rating = (rating, setRating, setShowThankYouPage) => {
               fourStars: false,
               fiveStars: false
             })
-            setRating(2)
+            props.clickHandler(2)
           }}
         >
           2
@@ -77,7 +77,7 @@ const Rating = (rating, setRating, setShowThankYouPage) => {
               fourStars: false,
               fiveStars: false
             })
-            setRating(3)
+            props.clickHandler(3)
           }}
         >
           3
@@ -96,7 +96,7 @@ const Rating = (rating, setRating, setShowThankYouPage) => {
               fourStars: true,
               fiveStars: false
             })
-            setRating(4)
+            props.clickHandler(4)
           }}
         >
           4
@@ -115,7 +115,7 @@ const Rating = (rating, setRating, setShowThankYouPage) => {
               fourStars: false,
               fiveStars: true
             })
-            setRating(5)
+            props.clickHandler(5)
           }}
         >
           5

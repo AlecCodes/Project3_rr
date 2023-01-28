@@ -5,9 +5,13 @@ import Rating from "../Components/Rating";
 function Show(props) {
   const restaurant = useLoaderData();
 
+  function clickHandler(number){
+    console.log(number)
+  }
+
   return (
     <div className="showForm">
-      <Rating className="rating" />
+      <Rating clickHandler={clickHandler} className="rating" />
       <Form action={`/update/${restaurant._id}`} method="post">
         <input type="text" name="name" placeholder="Restaurant Name" className="showinput"/>
         <br />
