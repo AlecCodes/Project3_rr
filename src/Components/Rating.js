@@ -1,4 +1,4 @@
-import Card from './Card'
+import Square from './Square'
 import '../Rating.css'
 import starImg from '../media/icon-star.svg'
 import React, { useState } from 'react'
@@ -19,7 +19,7 @@ const Rating = (rating, setRating, setShowThankYouPage) => {
   }
 
   return (
-    <Card>
+    <Square>
       <div className="star-img-container">
         <img src={starImg} alt="" />
       </div>
@@ -124,7 +124,7 @@ const Rating = (rating, setRating, setShowThankYouPage) => {
       <button className="submit-btn" onClick={handleSubmit}>
         Submit
       </button>
-    </Card>
+    </Square>
   )
 }
 
