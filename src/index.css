@@ -209,6 +209,7 @@ img {
 
 .cardform {
   padding-top: 2em;
+  
 }
 
 .cardform input {
@@ -259,7 +260,7 @@ button:hover {
 .searchsubmit,
 .return {
   margin-left: 5px;
-  height: 30px;
+  height: 35px;
   width: 70px;
   background-color: hsl(25, 97%, 53%);
   color: white;
@@ -426,7 +427,7 @@ button:hover {
 }
 
 /* Styles for the form and delete button */
-form {
+.inputform {
   display: flex;
   /* flex-wrap: wrap; */
   align-items: center;
@@ -466,6 +467,8 @@ form {
   width: 100%;
   background-color: #f44336;
   color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
   border: none;
   border-radius: 4px;
   cursor: pointer;

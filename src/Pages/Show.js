@@ -15,8 +15,8 @@ function Show(props) {
 
   return (
     <div className="showForm">
-      <Rating setRatingState={setRatingState} className="rating" />
-      <Form action={`/update/${restaurant._id}`} method="post">
+      <Rating className="rating" setRatingState={setRatingState}/>
+      <Form action={`/update/${restaurant._id}`} method="post" className='inputform'>
         <input type='number' name='rating' placeholder="Rating!"/>
         <input type="text" name="name" placeholder="Restaurant Name" className="showinput"/>
         <br />
