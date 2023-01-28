@@ -336,6 +336,9 @@ button:hover {
 
 }
 
+.invisibleRating{
+  display: none;
+}
 .rating-container {
   text-align: center;
   height: 45px;
