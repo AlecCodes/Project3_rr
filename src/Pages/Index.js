@@ -1,6 +1,5 @@
 import {Form, Link, useLoaderData} from 'react-router-dom'
 import {useState} from 'react'
-import Delete from '../Components/Delete'
 
 
 function Index(props){
