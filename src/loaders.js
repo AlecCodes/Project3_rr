@@ -2,7 +2,10 @@
 //const URL = 'https://backend-restaurant-review.onrender.com'
 
 //DEV URL
-const URL = "http://localhost:4000"
+//const URL = "http://localhost:4000"
+
+//JWT URL
+const URL = "https://rr-api-jwt.onrender.com"
 
 export const restaurantsLoader = async () => {
     const response = await fetch(URL + '/restaurant')
