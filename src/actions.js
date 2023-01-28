@@ -6,6 +6,7 @@ let URL = 'https://rr-api-jwt.onrender.com';
 
 //DEV URL
 //const URL = "http://localhost:4000"
+localStorage.setItem('token',JSON.stringify({token: null, username:"Anonymous eater"}))
 let currentUser = JSON.parse(localStorage.getItem("token")).username
 
 
