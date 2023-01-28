@@ -121,9 +121,9 @@ const Rating = (props, rating, setRating, setShowThankYouPage) => {
           5
         </div>
       </div>
-      <button className="submit-btn" onClick={handleSubmit}>
+      {/* <button className="submit-btn" onClick={handleSubmit}>
         Submit
-      </button>
+      </button> */}
     </Square>
   )
 }
