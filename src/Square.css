@@ -1,8 +1,8 @@
 .square {
   width: 400px;
   max-width: 90vw;
-  height: 400px;
-  background-color: hsl(213, 19%, 18%);
+  height: 200px;
+  background-color: transparent;
   border-radius: 1.25rem;
   padding: 2rem;
 }
