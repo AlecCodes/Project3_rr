@@ -8,7 +8,7 @@ function Show(props) {
   return (
     <div className="showForm">
       <Rating className="rating" />
-      <Form action={`/update/${restaurant._id}`} method="post">
+      <Form action={`/update/${restaurant._id}`} method="post" className='inputform'>
         <input type="text" name="name" placeholder="Restaurant Name" className="showinput"/>
         <br />
         <input type="text" name="image" placeholder="Restaurant Image" className="showinput"/>
