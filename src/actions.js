@@ -1,11 +1,8 @@
 import { redirect } from 'react-router-dom';
 
-
-//let URL = 'https://backend-restaurant-review.onrender.com';
-
-
 //DEV URL
 //const URL = "http://localhost:4000"
+
 
 let URL = "https://rr-api-jwt.onrender.com"
 
@@ -80,7 +77,8 @@ export const loginAction = async({request}) => {
     .then(response => response.json())
     //username and token are bundled together
     .then(data => localStorage.setItem('token', JSON.stringify(data)))
-    return redirect('/')}
+    return redirect('/')
+}
 
 export const logoutAction = async() =>{
     localStorage.setItem('token',JSON.stringify({token: null, username:"Anonymous eater"}))
