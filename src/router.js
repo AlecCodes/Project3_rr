@@ -9,6 +9,7 @@ import Register from './Pages/Register'
 import { createAction, deleteAction, updateAction, loginAction, logoutAction, registerAction} from "./actions"
 import { restaurantLoader, restaurantsLoader } from "./loaders"
 
+
 const router = createBrowserRouter(createRoutesFromElements(
     <Route path="/" element={<App/>}>
         <Route path="" element={<Index/>} loader={restaurantsLoader}/>

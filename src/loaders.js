@@ -1,4 +1,3 @@
-import { useParams } from "react-router-dom"
 
 //const URL = 'https://backend-restaurant-review.onrender.com'
 

@@ -1,14 +1,15 @@
 import {Form, Link, useLoaderData} from 'react-router-dom'
-import {useState,useContext} from 'react'
-import Delete from '../Components/Delete'
+import {useState, useEffect} from 'react'
 
 
 function Index(props){
+
     let currentUser = JSON.parse(localStorage.getItem("token")).username
 
+    //Load restaurants 
     const data = useLoaderData()
     const [dataState, setDataState] = useState(data)
-
+    //control form
     const [formState, setFormState] = useState('')
 
     function changeHandler(event){
@@ -25,7 +26,7 @@ function Index(props){
         setFormState('')
         setDataState(data)
     }
-
+    //alphabetize 
     dataState.sort((a,b) => {
         if (a.name > b.name){
             return 1
@@ -50,6 +51,7 @@ function Index(props){
                     <br/>
                 <input className='searchsubmit' type='submit'/>
                 <button className='clear' onClick={clearFilter}>Clear</button>
+                <button className='clear'>Personal</button>
             </Form>
 
             <nav className='navbar'>

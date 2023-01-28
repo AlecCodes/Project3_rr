@@ -1,4 +1,4 @@
-import { redirect, setState } from 'react-router-dom';
+import { redirect } from 'react-router-dom';
 
 
 //let URL = 'https://backend-restaurant-review.onrender.com';
@@ -77,7 +77,6 @@ export const loginAction = async({request}) => {
 
 export const logoutAction = async() =>{
     localStorage.setItem('token',JSON.stringify({token: null, username:"Anonymous eater"}))
-//    localStorage.setItem('currentUser','')
     console.log("Logout~!")
     return redirect('/')
 }
