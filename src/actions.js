@@ -1,11 +1,11 @@
 import { redirect } from 'react-router-dom';
 
 
-//let URL = 'https://backend-restaurant-review.onrender.com';
+let URL = 'https://rr-api-jwt.onrender.com';
 
 
 //DEV URL
-const URL = "http://localhost:4000"
+//const URL = "http://localhost:4000"
 let currentUser = JSON.parse(localStorage.getItem("token")).username
 
 
