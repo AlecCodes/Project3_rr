@@ -22,6 +22,15 @@ function Index(props){
         setDataState(filtered)
     }
 
+    function personalFilter(){
+        const filtered = [...data].filter((element) => {
+            if(currentUser === element.creator){
+                return element
+            }
+        }) 
+        setDataState(filtered)
+    }
+    
     function clearFilter(event){
         setFormState('')
         setDataState(data)
@@ -51,7 +60,7 @@ function Index(props){
                     <br/>
                 <input className='searchsubmit' type='submit'/>
                 <button className='clear' onClick={clearFilter}>Clear</button>
-                <button className='clear'>Personal</button>
+                <button className='clear' onClick={personalFilter}>Personal</button>
             </Form>
 
             <nav className='navbar'>
