@@ -11,10 +11,11 @@ function Show(props) {
   }
 
   const [ratingState, setRatingState] = useState(null)
+  const [ratingFormState, setRatingFormState] = useState(null)
 
   return (
     <div className="showForm">
-      <Rating clickHandler={clickHandler} className="rating" />
+      <Rating setRatingState={setRatingState} className="rating" />
       <Form action={`/update/${restaurant._id}`} method="post">
         <input type='number' name='rating' placeholder="Rating!"/>
         <input type="text" name="name" placeholder="Restaurant Name" className="showinput"/>

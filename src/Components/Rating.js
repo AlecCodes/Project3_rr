@@ -39,7 +39,7 @@ const Rating = (props, rating, setRating, setShowThankYouPage) => {
               fourStars: false,
               fiveStars: false
             })
-            props.clickHandler(1)
+            props.setRatingState(1)
           }}
         >
           1
@@ -58,7 +58,7 @@ const Rating = (props, rating, setRating, setShowThankYouPage) => {
               fourStars: false,
               fiveStars: false
             })
-            props.clickHandler(2)
+            props.setRatingState(2)
           }}
         >
           2
@@ -77,7 +77,7 @@ const Rating = (props, rating, setRating, setShowThankYouPage) => {
               fourStars: false,
               fiveStars: false
             })
-            props.clickHandler(3)
+            props.setRatingState(3)
           }}
         >
           3
@@ -96,7 +96,7 @@ const Rating = (props, rating, setRating, setShowThankYouPage) => {
               fourStars: true,
               fiveStars: false
             })
-            props.clickHandler(4)
+            props.setRatingState(4)
           }}
         >
           4
@@ -115,7 +115,7 @@ const Rating = (props, rating, setRating, setShowThankYouPage) => {
               fourStars: false,
               fiveStars: true
             })
-            props.clickHandler(5)
+            props.setRatingState(5)
           }}
         >
           5
