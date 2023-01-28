@@ -1,9 +1,18 @@
+import { useEffect } from 'react';
+
 import { Link } from 'react-router-dom'
 
 function Header(props){
-    { 
         let bannerStatus = 1;
-        let bannerTimer = 4000;
+        let bannerTimer = 300;
+
+        window.onload = function() {
+            bannerLoop();
+        }
+
+        const startBannerLoop = setInterval(function() {
+            bannerLoop();
+        }, bannerTimer);
 
         function bannerLoop() {
             if (bannerStatus === 1) {
@@ -52,13 +61,13 @@ function Header(props){
                     bannerStatus = 1;
             }
         }
-        }
 
-    return <div className="header">
+    return <>
+    <div className="header">
         <Link to='/'><h1>Hungr</h1></Link>
         <div className='main-banner' id='main-banner'>
             <div className='imgban' id='imgban3'>
-
+            {startBannerLoop}
             </div>
             <div className='imgban' id='imgban2'>
 
@@ -68,5 +77,6 @@ function Header(props){
             </div>
         </div>
     </div>
+    </>
 }
 export default Header
