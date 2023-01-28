@@ -344,7 +344,7 @@ button:hover {
   height: 45px;
   width: 45px;
   border-radius: 50%;
-  background-color: hsl(211, 19%, 24%);
+  background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
