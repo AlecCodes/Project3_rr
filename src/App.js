@@ -8,6 +8,7 @@ import ScrollButton from './Components/ScrollButton';
 
 
 function App() {
+  localStorage.setItem('token',JSON.stringify({token: null, username:"Anonymous eater"}))
 
   return (
     <div className="App">

@@ -4,7 +4,7 @@ import {useState} from 'react'
 function Index(props){
 
     let currentUser = JSON.parse(localStorage.getItem("token")).username
-
+    
     //Load restaurants 
     const data = useLoaderData()
     const [dataState, setDataState] = useState(data)
