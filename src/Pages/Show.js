@@ -1,35 +1,38 @@
 import { useLoaderData, Form } from "react-router-dom";
-// import { useOutletContext } from 'react-router-dom'
-import Delete from '../Components/Delete';
+import Delete from "../Components/Delete";
 import Rating from "../Components/Rating";
 
 function Show(props) {
-  // const restaurant = useLoaderData();
   const restaurant = useLoaderData();
 
   return (
-    <div className="showContainer">
-      <Rating />
+    <div className="showForm">
+      <Rating className="rating" />
       <Form action={`/update/${restaurant._id}`} method="post">
-        <input type="text" name="name" placeholder="Restaurant Name" />
+        <input type="text" name="name" placeholder="Restaurant Name" className="showinput"/>
         <br />
-        <input type="text" name="image" placeholder="Restaurant Image" />
+        <input type="text" name="image" placeholder="Restaurant Image" className="showinput"/>
         <br />
-        <input type="text" name="type" placeholder="Food Type" />
+        <input type="text" name="type" placeholder="Food Type" className="showinput"/>
         <br />
-        <input type="submit" value="Update Restaurant" />
+        <input type="submit" value="Update" className="showsubmit"/>
       </Form>
-        <Delete id={restaurant._id}/>
-      <div className="showHeader">{restaurant.name}</div>
-      <div className="showImageContainer">
-        <img src={restaurant.image} />
-      </div>
-      <div className="showDetails">
-        <p>Created by: {restaurant.creator}</p>
-        <p>{restaurant.cuisine} Cuisine</p>
+      <Delete id={restaurant._id}/>
+      <div className="show-container">
+        <div className="image-container">
+          <img src={restaurant.image} className="restaurant-image" />
+          <div className="title-overlay">
+            <div className="title-text" style={{ textAlign: "center" }}>
+              <div className="showHeader">{restaurant.name}</div>
+            </div>
+          </div>
+        </div>
+        <div className="showDetails">
+          <p>{restaurant.cuisine} Cuisine</p>
+        </div>
       </div>
     </div>
-  )
-  
+  );
 }
+
 export default Show;

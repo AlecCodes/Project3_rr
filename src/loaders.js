@@ -1,8 +1,6 @@
 
 const URL = 'https://rr-api-jwt.onrender.com'
 
-//DEV URL
-//const URL = "http://localhost:4000"
 
 export const restaurantsLoader = async () => {
     const response = await fetch(URL + '/restaurant')
