@@ -1,11 +1,19 @@
-import { redirect, setState } from 'react-router-dom';
+import { redirect } from 'react-router-dom';
 
 
-let URL = 'https://backend-restaurant-review.onrender.com';
+//let URL = 'https://backend-restaurant-review.onrender.com';
+
+
+//DEV URL
+const URL = "http://localhost:4000"
+let currentUser = JSON.parse(localStorage.getItem("token")).username
+
+
 
 export const createAction = async ({request}) => {
     const formData = await request.formData()
     const newRestaurant = {
+        creator: currentUser,
         name: formData.get("name"),
         image: formData.get("image"),
         type: formData.get("type"),
@@ -19,6 +27,7 @@ export const createAction = async ({request}) => {
         },
         body: JSON.stringify(newRestaurant)
     })
+    console.log(currentUser)
     return redirect('/')
 }
 
@@ -44,6 +53,46 @@ export const  updateAction = async ({request, params}) => {
 export const deleteAction = async ({params}) => {
     await fetch(URL + `/restaurant/${params.id}`, {
         method: 'delete'
+    })
+    return redirect('/')
+}
+
+export const loginAction = async({request}) => {
+    const formData = await request.formData()
+    const User = {
+        username: formData.get("username"),
+        password: formData.get("password")
+    }
+    fetch(URL + '/auth/login',{
+        method:'post',
+        headers: {
+            "Content-Type":"application/json"
+        },
+        body:JSON.stringify(User)
+    })
+    .then(response => response.json())
+    //username and token are bundled together
+    .then(data => localStorage.setItem('token', JSON.stringify(data)))
+    return redirect('/')}
+
+export const logoutAction = async() =>{
+    localStorage.setItem('token',JSON.stringify({token: null, username:"Anonymous eater"}))
+    console.log("Logout~!")
+    return redirect('/')
+}
+
+export const registerAction = async({request}) => {
+    const formData = await request.formData()
+    const newUser = {
+        username: formData.get("username"),
+        password: formData.get("password")
+    }
+    fetch(URL + '/auth/signup',{
+        method:'post',
+        headers: {
+            "Content-Type":"application/json"
+        },
+        body:JSON.stringify(newUser)
     })
     return redirect('/')
 }
