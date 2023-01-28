@@ -188,6 +188,7 @@ img {
   padding: .5rem;
   box-shadow: 0 .25rem 1rem rgba(0, 0, 0,  .1);
   border-radius: 8px;
+
 }
 
 /* Create Card */
@@ -209,12 +210,16 @@ img {
 
 .cardform {
   padding-top: 2em;
-  
 }
 
 .cardform input {
   margin-top: 5px;
 }
+
+.createsubmit {
+
+}
+
 
 a {
   display: inline-block;
