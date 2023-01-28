@@ -9,6 +9,10 @@ import { redirect } from 'react-router-dom';
 
 let URL = "https://rr-api-jwt.onrender.com"
 
+
+if (!localStorage.getItem("token")){
+    localStorage.setItem('token',JSON.stringify({token: null, username:"Anonymous eater"}))
+}
 let currentUser = JSON.parse(localStorage.getItem("token")).username
 
 

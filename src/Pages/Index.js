@@ -5,6 +5,9 @@ import {useState} from 'react'
 
 function Index(props){
 
+    if (!localStorage.getItem("token")){
+        localStorage.setItem('token',JSON.stringify({token: null, username:"Anonymous eater"}))
+        }
     let currentUser = JSON.parse(localStorage.getItem("token")).username
 
     //Load restaurants 
