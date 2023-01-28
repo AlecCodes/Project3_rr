@@ -1,15 +1,16 @@
 import {Form, Link, useLoaderData} from 'react-router-dom'
+
 import {useState} from 'react'
 
 
 function Index(props){
-    //See the context prop of Outlet component in app.js
-    // const contextdata = useOutletContext()
-    // console.log("CONTEXT DATA IN INDEX ROUTE - VVVVVV")
-    // console.log(contextdata)
+
+    let currentUser = JSON.parse(localStorage.getItem("token")).username
+
+    //Load restaurants 
     const data = useLoaderData()
     const [dataState, setDataState] = useState(data)
-
+    //control form
     const [formState, setFormState] = useState('')
 
     function changeHandler(event){
@@ -22,11 +23,20 @@ function Index(props){
         setDataState(filtered)
     }
 
+    function personalFilter(){
+        const filtered = [...data].filter((element) => {
+            if(currentUser === element.creator){
+                return element
+            }
+        }) 
+        setDataState(filtered)
+    }
+    
     function clearFilter(event){
         setFormState('')
         setDataState(data)
     }
-
+    //alphabetize 
     dataState.sort((a,b) => {
         if (a.name > b.name){
             return 1
@@ -38,7 +48,9 @@ function Index(props){
     })
     return <div className='main'>
         <aside className='sidebar'>
-
+            <div>
+                <p>{`Welcome, ${currentUser}!`}</p>
+            </div>
             <Form>
                 <input
                     className='search'
@@ -49,17 +61,23 @@ function Index(props){
                     <br/>
                 <input className='searchsubmit' type='submit'/>
                 <button className='clear' onClick={clearFilter}>Clear</button>
+                <button className='clear' onClick={personalFilter}>Personal</button>
             </Form>
 
             <nav className='navbar'>
-                <Link to="/">
+                <Link to="register">
                     <div>Register</div>
                 </Link>
-                <Link to="/">
+                <Link to="login">
                     <div>Log In</div>
                 </Link>
                 <Link to='create'>
                     <div>Add Restaurant</div>
+                </Link>
+                <br/>
+                {/* //Wrap this in logic so it dissapears when logged out? */}
+                <Link to='logout'>
+                    <div>Logout</div>
                 </Link>
             </nav>
         

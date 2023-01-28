@@ -25,6 +25,7 @@ function Show(props) {
         <img src={restaurant.image} />
       </div>
       <div className="showDetails">
+        <p>Created by: {restaurant.creator}</p>
         <p>{restaurant.cuisine} Cuisine</p>
       </div>
     </div>
